@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "easy to use note taker",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,5 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "16.20.0"
   }
+  
 }
