@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const notes = require('./db/db.json');
 const app = express();
-const PORT = 3001;
+//const PORT = 3001;
 
 app.use(express.json());
 
@@ -57,6 +57,6 @@ app.get('/api/notes/:id', (req, res) => {
 
 
 
-app.listen(PORT, () =>
-  console.log(`Listening at http://localhost:${PORT}`)
-);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
