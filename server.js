@@ -49,9 +49,9 @@ app.get('/api/notes/:id', (req, res) => {
     const result = findById(req.params.id, notes);
 
     if (result) {
-        res.status(200).json(result);
+        res.send(result);
     } else {
-        res.status(400).json('Error in finding note');
+        res.send(404);
     }
 });
 
