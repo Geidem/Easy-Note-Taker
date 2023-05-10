@@ -45,7 +45,7 @@ app.post('/api/notes', (req, res) => {
 
 // selecting a saved note from left hand column and displaying it in the right hand column
 
-app.get('/api/notes/:id', (req, res) => {
+app.fetch('/api/notes/:id', (req, res) => {
     const result = findById(req.params.id, notes);
 
     if (result) {
